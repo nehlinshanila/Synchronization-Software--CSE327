@@ -1,13 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
+const SyncUpdate = () => {
+  const [syncStatus, setSyncStatus] = useState("Syncing...");
 
-const Update =() => {
+  useEffect(() => {
+    const syncTimer = setInterval(() => {
+      // Simulate ongoing sync update
+      setSyncStatus("Syncing...");
 
-    return (
-        <div>
-            <h2>This is the "update PAGE"</h2>
-        </div>
-    )
-}
+      // Call an asynchronous function to update the sync status
+      // Example: fetchSyncStatus().then(data => setSyncStatus(data.status));
+    }, 5000); // Update every 5 seconds
 
-export default Update;
+    // Clean up the interval when the component unmounts
+    return () => {
+      clearInterval(syncTimer);
+    };
+  }, []);
+
+  return (
+    <div>
+      <h2>Ongoing Sync Update</h2>
+      <p>{syncStatus}</p>
+    </div>
+  );
+};
+
+export default SyncUpdate;

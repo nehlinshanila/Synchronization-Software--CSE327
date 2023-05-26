@@ -12,7 +12,7 @@ const StatisticsBar = ({ chartData }) => {
         width: "100%",
       }}
     >
-          This is Statisics Bar Data
+      This is Statisics Bar Data
       <Bar data={chartData} />
     </div>
   );

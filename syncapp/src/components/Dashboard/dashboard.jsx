@@ -3,7 +3,7 @@ import Navbar from "./Navbar/navbar";
 import StatisticsBar from "./Statistics/statisticsbar";
 import StatisticsLine from "./Statistics/statisticsline";
 import StatisticsPie from "./Statistics/statisticspie";
-import Update from "./Update/update";
+import SyncUpdate from "./Update/update";
 import Connected from "./Connected/connected";
 import { UserData } from "./Statistics/data";
 
@@ -36,7 +36,7 @@ const Dashboard = ({ onHomeClick }) => {
       <StatisticsLine chartData={userData}/>
       <StatisticsPie chartData={userData}/>
 
-      <Update />
+      <SyncUpdate />
       <Connected />
     </div>
   );

@@ -20,11 +20,10 @@ const Navbar = () => {
   return (
     <div
       style={{
-        backgroundColor: "lightgreyo",
         position: "absolute",
         height: "100%",
         width: "100",
-        backgroundColor: "lightgrey",
+        // backgroundColor: "lightgrey",
       }}
     >
       Below is the navbar
