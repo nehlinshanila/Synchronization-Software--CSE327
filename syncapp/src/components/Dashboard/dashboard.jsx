@@ -1,28 +1,45 @@
-import React from 'react';
-import Navbar from './Navbar/navbar';
-import Statistics from './Statistics/statistics';
-import Update from './Update/update';
-import Connected from './Connected/connected';
+import React, { useState } from "react";
+import Navbar from "./Navbar/navbar";
+import StatisticsBar from "./Statistics/statisticsbar";
+import StatisticsLine from "./Statistics/statisticsline";
+import StatisticsPie from "./Statistics/statisticspie";
+import Update from "./Update/update";
+import Connected from "./Connected/connected";
+import { UserData } from "./Statistics/data";
 
+const Dashboard = ({ onHomeClick }) => {
+  const handleHomeClick = () => {
+    onHomeClick();
+  };
+  const [userData, setuserData] = useState({
+    labels: UserData.map((data) => data.year),
 
-const Dashboard =({ onHomeClick }) => {
-    const handleHomeClick = () => {
-        onHomeClick();
-      };
+    datasets: [
+      {
+        label: "Users Gained",
+        data: UserData.map((data) => data.userGain),
+        backgroundColor: ["#99c9ff", "#99b8ff", "#9e99ff", "#be99ff"],
+        borderColor: "grey",
+        borderWidth: 1,
+      },
+    ],
+  });
 
-    return (
-        <div>
-            <h1>This is the "DASHBOARD PAGE"</h1>
-            <p>this is the third and final page a user appears at</p>
-            <button onClick={handleHomeClick}>Home</button>
+  return (
+    <div style={{ position: "absolute" }}>
+      <h1>This is the "DASHBOARD PAGE"</h1>
+      <p>this is the third and final page a user appears at</p>
+      <button onClick={handleHomeClick}>Home</button>
 
-            <Navbar/>
-            <Statistics/>
-            <Update/>
-            <Connected/>
+      <Navbar />
+      <StatisticsBar chartData={userData}/>
+      <StatisticsLine chartData={userData}/>
+      <StatisticsPie chartData={userData}/>
 
-        </div>
-    )
-}
+      <Update />
+      <Connected />
+    </div>
+  );
+};
 
 export default Dashboard;
