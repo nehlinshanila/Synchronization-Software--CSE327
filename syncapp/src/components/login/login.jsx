@@ -1,16 +1,23 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "./login.css"; // Import the CSS file
 
 const Login = () => {
-
   return (
-    <div>
-      <h1>This is the "LOGIN PAGE"</h1>
-      <p>This is the second page a user appears at</p>
-      <button><Link to="/frontpage">Go back to Frontpage</Link></button>
-      <button><Link to="/dashboard">Go back to Dashboard</Link></button>
-
+    <div className="login-container">
+      <h1 className="login-heading">Login</h1>
+      <form className="login-form">
+        <input type="text" placeholder="Username" className="login-input" />
+        <input type="password" placeholder="Password" className="login-input" />
+      </form>
+      <div className="login-buttons">
+        <Link to="/frontpage">
+          <button className="login-nav-button">Home</button>
+        </Link>
+        <Link to="/dashboard">
+          <button className="login-nav-button">Login</button>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -18,13 +18,7 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      style={{
-        position: "absolute",
-        height: "100%",
-        width: "20%",
-        backgroundColor: "lightgrey",
-      }}
+    <div className="nav"
     >
       Below is the navbar
       <ul>

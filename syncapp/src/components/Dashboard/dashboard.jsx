@@ -35,11 +35,13 @@ const Dashboard = () => {
         </button>
       </div>
       <Navbar />
-      <StatisticsBar chartData={userData} />
+      <div>
+        <StatisticsBar chartData={userData} />
 
-      <StatisticsLine chartData={userData} />
+        <StatisticsLine chartData={userData} />
 
-      <StatisticsPie chartData={userData} />
+        <StatisticsPie chartData={userData} />
+      </div>
 
       <SyncUpdate />
       <Connected />
