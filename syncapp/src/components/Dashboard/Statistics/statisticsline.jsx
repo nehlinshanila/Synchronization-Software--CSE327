@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
+import "../dashboard.css"; // Import the CSS file
+
 
 const StatisticsLine = ({ chartData }) => {
   return (
-    <div
-      style={{
-        // display: "flex",
-        position: "relative",
-        top: -260,
-        left: 640,
-        width: "100%",
-      }}
+    <div className="StatisticsLine"
     >
-      This is Statisics Line Data
       <Line data={chartData} />
     </div>
   );

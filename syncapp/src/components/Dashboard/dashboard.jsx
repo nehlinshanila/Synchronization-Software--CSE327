@@ -7,12 +7,11 @@ import StatisticsPie from "./Statistics/statisticspie";
 import SyncUpdate from "./Update/update";
 import Connected from "./Connected/connected";
 import { UserData } from "./Statistics/data";
+import "./dashboard.css"; // Import the CSS file
 
 const Dashboard = () => {
-
   const [userData, setuserData] = useState({
     labels: UserData.map((data) => data.year),
-
     datasets: [
       {
         label: "Users Gained",
@@ -25,15 +24,22 @@ const Dashboard = () => {
   });
 
   return (
-    <div style={{ position: "absolute" }}>
-      <h1>This is the "DASHBOARD PAGE"</h1>
-      <p>this is the third and final page a user appears at</p>
-      <button><Link to="/dashboard">Go back to Dashboard</Link></button>
-
+    <div className="container">
+      <div className="top">
+        <h1 className="dashboard-title">This is the "DASHBOARD PAGE"</h1>
+        <p className="dashboard-description">
+          This is the third and final page a user appears at
+        </p>
+        <button className="dashboard-button">
+          <Link to="/frontpage">Go back to frontpage</Link>
+        </button>
+      </div>
       <Navbar />
-      <StatisticsBar chartData={userData}/>
-      <StatisticsLine chartData={userData}/>
-      <StatisticsPie chartData={userData}/>
+      <StatisticsBar chartData={userData} />
+
+      <StatisticsLine chartData={userData} />
+
+      <StatisticsPie chartData={userData} />
 
       <SyncUpdate />
       <Connected />

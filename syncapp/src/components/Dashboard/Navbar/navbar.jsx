@@ -22,8 +22,8 @@ const Navbar = () => {
       style={{
         position: "absolute",
         height: "100%",
-        width: "100",
-        // backgroundColor: "lightgrey",
+        width: "20%",
+        backgroundColor: "lightgrey",
       }}
     >
       Below is the navbar
