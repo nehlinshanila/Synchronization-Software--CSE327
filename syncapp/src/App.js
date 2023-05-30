@@ -1,42 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Frontpage from './components/Frontpage/frontpage';
 import Login from './components/login/login';
 import Dashboard from './components/Dashboard/dashboard';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('frontpage');
-
-  const handleLoginClick = () => {
-    setCurrentPage('login');
-  };
-
-  const handleEnterClick = () => {
-    setCurrentPage('dashboard');
-  };
-
-  const handleBackClick = () => {
-    setCurrentPage('frontpage');
-  };
-
-  const handleHomeClick = () => {
-    setCurrentPage('frontpage');
-  };
 
   return (
-    <div>
-      {currentPage === 'frontpage' && (
-        <Frontpage onLoginClick={handleLoginClick} />
-      )}
-      {currentPage === 'login' && (
-        <Login
-          onBackClick={handleBackClick}
-          onEnterClick={handleEnterClick}
-        />
-      )}
-      {currentPage === 'dashboard' && (
-        <Dashboard onHomeClick={handleHomeClick} />
-      )}
-    </div>
+ 
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/login" component={Login} element={ <div>this is login</div> }/>
+        <Route path="/home" element={ <div>this is Home</div> }/> */}
+        <Route exact path="/frontpage" element={<Frontpage/>}/>
+        <Route path="/login" element={<Login/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+
+      </Routes>
+    </BrowserRouter>
   );
 };
 
