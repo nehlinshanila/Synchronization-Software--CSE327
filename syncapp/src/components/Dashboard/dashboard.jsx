@@ -16,8 +16,8 @@ const Dashboard = () => {
       {
         label: "Users Gained",
         data: UserData.map((data) => data.userGain),
-        backgroundColor: ["#99c9ff", "#99b8ff", "#9e99ff", "#be99ff"],
-        borderColor: "grey",
+        backgroundColor: ["#077094", "#0093A9", "#33B7B5", "#70D9B8", "#eb7f6cbc"],
+        borderColor: "#ABA9BB",
         borderWidth: 1,
       },
     ],
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      
+      <h1 className="dashboard-title">DASHBOARD </h1>
       <Navbar />
       <div className="stat">
         <StatisticsBar chartData={userData} />

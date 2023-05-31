@@ -3,26 +3,32 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./frontpage.css"; // Import the CSS file
 
 const Frontpage = () => {
-    useEffect(() => {
-        const handleScroll = (sectionClass) => {
-          const section = document.querySelector(sectionClass);
-          window.scrollTo({
-            top: section.offsetTop,
-            behavior: 'smooth',
-          });
-        };
-    
-        const aboutLink = document.querySelector('.about-link');
-        aboutLink.addEventListener('click', () => handleScroll('.section-about'));
-    
-        const servicesLink = document.querySelector('.services-link');
-        servicesLink.addEventListener('click', () => handleScroll('.section-services'));
-    
-        return () => {
-          aboutLink.removeEventListener('click', () => handleScroll('.section-about'));
-          servicesLink.removeEventListener('click', () => handleScroll('.section-services'));
-        };
-      }, []);
+  useEffect(() => {
+    const handleScroll = (sectionClass) => {
+      const section = document.querySelector(sectionClass);
+      window.scrollTo({
+        top: section.offsetTop,
+        behavior: "smooth",
+      });
+    };
+
+    const aboutLink = document.querySelector(".about-link");
+    aboutLink.addEventListener("click", () => handleScroll(".section-about"));
+
+    const servicesLink = document.querySelector(".services-link");
+    servicesLink.addEventListener("click", () =>
+      handleScroll(".section-services")
+    );
+
+    return () => {
+      aboutLink.removeEventListener("click", () =>
+        handleScroll(".section-about")
+      );
+      servicesLink.removeEventListener("click", () =>
+        handleScroll(".section-services")
+      );
+    };
+  }, []);
 
   return (
     <div className="frontpage-container">
@@ -32,13 +38,18 @@ const Frontpage = () => {
         <nav className="frontpage-nav">
           <ul>
             <li>
-              <a href="#">Home</a>
+              <a className="about-link" href="#">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a a className="services-link" href="#">
+                Services
+              </a>
             </li>
             <li>
-              <a className="about-link" href="#">About</a>
-            </li>
-            <li>
-              <a a className="services-link" href="#">Services</a>
+              <a href="#">Sign Up</a>
             </li>
             <li>
               <Link to="/login">Login</Link>

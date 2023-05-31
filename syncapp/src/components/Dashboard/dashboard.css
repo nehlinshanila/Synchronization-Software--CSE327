@@ -1,94 +1,116 @@
 /* Default styles */
 body {
-  background: #beb9d0;
+  background: #aeaabc9a;
 }
-.container {
+/* .container {
+      color: #F9F8FF;
+
   margin: 0 auto;
-  /* padding: 20px; */
-  position: absolute;
-  /* background-color: rgba(255, 0, 0, 0.462); */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100vw;
 }
 .stat {
-  /* width: 100%; */
-  /* margin-left: 200px; */
+
   position: relative;
-  /* margin-top: 100px; */
-  /* background-color: rgba(0, 0, 255, 0.355); */
+ 
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-  /* flex-grow: 5; */
-  width: 100vw;
+
   padding: 20px;
 }
-/* flex direction will be column and per column will have 1 chart */
 .StatisticsBar {
   background-color: #fbf7ff;
   border-radius: 20px;
-  /* padding: 20px; */
-  /* display: inline-flex; */
+  width: 50vh;
+
   position: relative;
-  /* width: 50vh; */
-  /* float: left; */
-  /* margin-left: 10px; */
+
   flex-grow: 2;
 }
 
 .StatisticsLine {
   background-color: #fbf7ff;
   border-radius: 20px;
-  /* padding: 20px;   */
-  /* display: inline-flex; */
+
   position: relative;
-  /* width: 50vh; */
-  /* float: left; */
+  width: 48vh;
   flex-grow: 5;
-  /* margin-left: 10px; */
 }
 
 .StatisticsPie {
   background-color: #fbf7ff;
   border-radius: 20px;
-  /* padding: 20px;   */
-  /* display: inline-flex; */
+  width: 40vh;
   position: relative;
 
-  /* float: left; */
   flex-shrink: -3;
-  /* flex-grow: 3; */
-  /* margin-left: 10px; */
+ 
+} */
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
+}
+
+.stat {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+
+.StatisticsBar {
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  width: 65%;
+
+  position: relative;
+
+}
+
+.StatisticsLine {
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  width: 60%;
+
+  position: relative;
+}
+
+.StatisticsPie {
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  width: 20%;
+
+  position: relative;
 }
 
 .dashboard-title {
-  font-size: 24px;
+  width: 100%;
+  font-size: 55px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  position: fixed;
+  color: #beb9d0;
+  background: linear-gradient(to left, #2022420a, #535c937a, #2b2c4fd1);
+  margin-top: 0;
+  margin-left: 200px;
 }
 
-.dashboard-description {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.dashboard-button {
-  display: block;
-  width: 200px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
-  background-color: #3498db;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
+/* #24243e, #302b63, #0f0c29 */
+/* #000428 → #004e92 */
+/* #3a1c71 → #d76d77 → #ffaf7b */
+/* #c33764 → #1d2671 */
+/* #CCCCFF */
 /* Media queries for responsiveness */
 
 @media (max-width: 1024px) {
