@@ -1,7 +1,14 @@
 .update {
-    display: grid;
-    position: absolute;
-    margin-left: 210px;
-    /* margin-top: 120px; */
-    bottom: 0px;
+  background-color: rgba(3, 3, 147, 0.659);
+
+  position: absolute;
+  margin-left: 58%;
+  margin-right: 0;
+  margin-top: 10px;
+  top: 350px;
+  bottom: 0px;
+  border-radius: 20px;
+  height: 40%;
+  width: 40%;
+  gap: 10px;
 }

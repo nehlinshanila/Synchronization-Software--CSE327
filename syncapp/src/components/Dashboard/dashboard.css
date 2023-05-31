@@ -65,21 +65,20 @@ body {
   align-items: flex-start;
   gap: 10px;
   padding: 20px;
-  margin-left: 200px;
+  margin-left: 195px;
   margin-top: 100px;
 }
 
 .StatisticsBar {
-  background-color: #fbf7ff;
+  background-color: #ffffff;
   border-radius: 20px;
   width: 65%;
-
   position: relative;
 
 }
 
 .StatisticsLine {
-  background-color: #fbf7ff;
+  background-color: #ffffff;
   border-radius: 20px;
   width: 60%;
 
@@ -87,7 +86,7 @@ body {
 }
 
 .StatisticsPie {
-  background-color: #fbf7ff;
+  background-color: #ffffff;
   border-radius: 20px;
   width: 20%;
 
@@ -100,10 +99,10 @@ body {
   font-weight: bold;
   text-align: left;
   position: fixed;
-  color: #beb9d0;
-  background: linear-gradient(to left, #2022420a, #535c937a, #2b2c4fd1);
+  color: #0000004b;
+  /* background: linear-gradient(to left, #2022420a, #535c937a, #2b2c4fd1); */
   margin-top: 0;
-  margin-left: 200px;
+  margin-left: 220px;
 }
 
 /* #24243e, #302b63, #0f0c29 */

@@ -35,8 +35,8 @@ const Dashboard = () => {
         <StatisticsPie chartData={userData} />
       </div>
 
-      {/* <SyncUpdate />
-      <Connected /> */}
+      <SyncUpdate />
+      <Connected />
     </div>
   );
 };
