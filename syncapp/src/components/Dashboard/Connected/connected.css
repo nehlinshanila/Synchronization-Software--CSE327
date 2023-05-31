@@ -1,0 +1,17 @@
+.connected {
+    background-color: rgba(0, 0, 255, 0.237);
+    display: grid;
+    position: absolute;
+    margin-left: 210px;
+    /* margin-top: 120px; */
+    top: 600px;
+    bottom: 0px;
+}
+
+/* .StatisticsLine {
+  display: flex;
+  position: absolute;
+  margin-left: 570px;
+  margin-top: 120px;
+  width: 120%;
+} */

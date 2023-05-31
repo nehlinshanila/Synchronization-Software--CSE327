@@ -25,17 +25,9 @@ const Dashboard = () => {
 
   return (
     <div className="container">
-      <div className="top">
-        <h1 className="dashboard-title">This is the "DASHBOARD PAGE"</h1>
-        <p className="dashboard-description">
-          This is the third and final page a user appears at
-        </p>
-        <button className="dashboard-button">
-          <Link to="/frontpage">Go back to frontpage</Link>
-        </button>
-      </div>
+      
       <Navbar />
-      <div>
+      <div className="stat">
         <StatisticsBar chartData={userData} />
 
         <StatisticsLine chartData={userData} />
@@ -43,8 +35,8 @@ const Dashboard = () => {
         <StatisticsPie chartData={userData} />
       </div>
 
-      <SyncUpdate />
-      <Connected />
+      {/* <SyncUpdate />
+      <Connected /> */}
     </div>
   );
 };

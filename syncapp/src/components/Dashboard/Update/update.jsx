@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./update.css"; // Import the CSS file
+
 
 const SyncUpdate = () => {
   const [syncStatus, setSyncStatus] = useState("Syncing...");
@@ -19,7 +21,7 @@ const SyncUpdate = () => {
   }, []);
 
   return (
-    <div>
+    <div className="update">
       <h2>Ongoing Sync Update</h2>
       <p>{syncStatus}</p>
     </div>
