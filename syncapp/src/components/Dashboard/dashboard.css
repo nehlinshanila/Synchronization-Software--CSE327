@@ -1,39 +1,68 @@
 /* Default styles */
+body {
+  background: #beb9d0;
+}
 .container {
   margin: 0 auto;
   /* padding: 20px; */
   position: absolute;
-  background-color: transparent;
+  /* background-color: rgba(255, 0, 0, 0.462); */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
 }
-.stat{
-   width: 100vh;
-   position: absolute;
-}
-.StatisticsBar {
-  background-color: red;
-  display: inline-flex;
+.stat {
+  /* width: 100%; */
+  /* margin-left: 200px; */
   position: relative;
-  /* margin-left: 210px;
-  margin-top: 20%;  */
-  width: 60vh;
+  /* margin-top: 100px; */
+  /* background-color: rgba(0, 0, 255, 0.355); */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  /* flex-grow: 5; */
+  width: 100vw;
+  padding: 20px;
+}
+/* flex direction will be column and per column will have 1 chart */
+.StatisticsBar {
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  /* padding: 20px; */
+  /* display: inline-flex; */
+  position: relative;
+  /* width: 50vh; */
+  /* float: left; */
+  /* margin-left: 10px; */
+  flex-grow: 2;
 }
 
 .StatisticsLine {
-  background-color: red;
-  display: inline-flex;
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  /* padding: 20px;   */
+  /* display: inline-flex; */
   position: relative;
-  /* margin-left: 570px;
-  margin-top: 20%; */
-  width: 60vh;
+  /* width: 50vh; */
+  /* float: left; */
+  flex-grow: 5;
+  /* margin-left: 10px; */
 }
 
 .StatisticsPie {
-  background-color: rgba(255, 0, 0, 0.444);
-  display: inline-flex;
+  background-color: #fbf7ff;
+  border-radius: 20px;
+  /* padding: 20px;   */
+  /* display: inline-flex; */
   position: relative;
-  /* margin-left: 1000px;
-  margin-top: 20%; */
-  width: 60vh;
+
+  /* float: left; */
+  flex-shrink: -3;
+  /* flex-grow: 3; */
+  /* margin-left: 10px; */
 }
 
 .dashboard-title {

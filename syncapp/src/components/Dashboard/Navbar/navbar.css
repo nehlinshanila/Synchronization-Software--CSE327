@@ -1,8 +1,8 @@
 
 .vertical-nav {
-    background-color: rgba(0, 0, 0, 0.45);
-    height: 100vh;
-    position: fixed;
+  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29);
+  height: 100vh;
+    /* position: fixed; */
     top: 0;
     left: 0;
     width: 200px;
