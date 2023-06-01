@@ -49,7 +49,7 @@ const Frontpage = () => {
               </a>
             </li>
             <li>
-              <a href="#">Sign Up</a>
+              <Link to="/signup">Sign Up</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>
