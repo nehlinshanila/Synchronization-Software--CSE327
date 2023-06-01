@@ -14,7 +14,7 @@ body {
   
   .frontpage-heading {
     position: relative;
-    font-size: 80px;
+    font-size: 10vw;
     font-weight: bold;
     text-align: center;
     margin-top: 20%;
@@ -47,36 +47,53 @@ body {
     text-decoration: none;
     font-weight: bold;
   }
-  
+  section {
+    position: relative;
+  }
   .section-about {
     border-radius: 30px;
     background-color: #ffffff71;
-    color: #333;
+    color: #2f334f;
     padding: 40px;
     margin-bottom: 40px;
+    
+  }
+  .section-about h2 {
+    font: 5vw "Arial";
+    text-align: center;
+    font-weight: bold;
+  }
+  .section-about p {
+    font: 25px "Arial";
+    padding: 20px;
+    margin: 10px;
   }
   
   .section-services {
     border-radius: 30px;
-    background-color: #f5f5f578;
+    background-color: #f5f5f529;
     padding: 40px;
     margin-bottom: 40px;
   }
   
-  section h2 {
-    font-size: 24px;
+  .section-services h2 {
+    font: 5vw "Arial";
+    text-align: center;
     font-weight: bold;
-    margin-bottom: 10px;
+  }
+  .section-services li {
+    font: 3vw "Arial";
+    font-weight: bold;
   }
   
   section p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
   }
   
   section ul {
     list-style: disc;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   
   footer {

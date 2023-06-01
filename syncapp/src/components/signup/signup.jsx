@@ -16,12 +16,8 @@ const Signup = () => {
         />
       </form>
       <div className="signup-buttons">
-        <Link to="/">
-          <button className="signup-nav-button">Back</button>
-        </Link>
-        <link to="/login">
-          <button className="signup-nav-button">Sign Up</button>
-        </link>
+        <Link to="/" className="signup-nav-button">Back</Link>
+        <Link to="/login" className="signup-nav-button">Signup</Link>
       </div>
     </div>
   );
