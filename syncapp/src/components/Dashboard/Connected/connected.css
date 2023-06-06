@@ -1,16 +1,14 @@
 .connected {
     background-color: rgba(3, 3, 147, 0.659);
-    display: flex;
-    align-items: flex-start;
     position: relative;
-    margin-left:-83%;
-    margin-top: 10px;
+    /* margin-left:-70%;
+    margin-top: 10px; */
     top: 350px;
     bottom: 0px;
     border-radius: 20px;
     height: 45%;
     gap: 10px;
-    width: 40%;
+    width: 60%;
 
 }
 /*   position: relative;

@@ -16,7 +16,13 @@ const Dashboard = () => {
       {
         label: "Users Gained",
         data: UserData.map((data) => data.userGain),
-        backgroundColor: ["#077094", "#0093A9", "#33B7B5", "#70D9B8", "#eb7f6cbc"],
+        backgroundColor: [
+          "#077094",
+          "#0093A9",
+          "#33B7B5",
+          "#70D9B8",
+          "#eb7f6cbc",
+        ],
         borderColor: "#ABA9BB",
         borderWidth: 1,
       },
@@ -34,9 +40,10 @@ const Dashboard = () => {
 
         <StatisticsPie chartData={userData} />
       </div>
-
-      <SyncUpdate />
-      <Connected />
+      <div class="flex-container">
+        <SyncUpdate />
+        <Connected />
+      </div>
     </div>
   );
 };
