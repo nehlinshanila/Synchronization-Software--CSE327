@@ -4,6 +4,7 @@ import Login from './components/login/login';
 import Signup from './components/signup/signup';
 import Dashboard from './components/Dashboard/dashboard';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import TestForm from './test/fetch';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/login" element={<Login/>} />
         <Route path="/signup" element={<Signup/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/test" element={<TestForm/>} />
 
       </Routes>
     </BrowserRouter>

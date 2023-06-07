@@ -9,7 +9,7 @@ const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
 
-    fetch("https://api.example.com/login", {
+    fetch("http://ec2-13-53-39-206.eu-north-1.compute.amazonaws.com:9000/testAPI", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

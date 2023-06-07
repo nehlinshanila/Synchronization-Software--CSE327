@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./update.css"; // Import the CSS file
 import DataTable from "react-data-table-component";
-
+// map method
+// data from backend
+// api to json and map
 const SyncUpdate = () => {
   const columns = [
     {

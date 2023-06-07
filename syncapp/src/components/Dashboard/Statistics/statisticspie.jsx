@@ -14,3 +14,5 @@ const StatisticsPie = ({ chartData }) => {
 };
 
 export default StatisticsPie;
+// pi is for which type for files uploaded
+// normal textfile video pic or audio file

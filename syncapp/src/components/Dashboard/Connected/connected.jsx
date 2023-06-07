@@ -81,3 +81,5 @@ const Connected = () => {
 };
 
 export default Connected;
+// email and deviuce connected map method
+// .map function usage in javascript

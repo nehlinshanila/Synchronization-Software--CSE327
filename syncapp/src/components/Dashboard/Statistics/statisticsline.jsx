@@ -14,3 +14,6 @@ const StatisticsLine = ({ chartData }) => {
 };
 
 export default StatisticsLine;
+// line will be daily usage 
+// which house 12am to 11.59pm how much usage and upload
+// or if i want then weekly usage
