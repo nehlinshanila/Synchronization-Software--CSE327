@@ -117,11 +117,9 @@ const TestForm = () => {
       .get(
         "http://ec2-13-53-39-206.eu-north-1.compute.amazonaws.com:9000/testAPI"
       )
-      // .get("http://localhost:9000/testAPI")
       .then((response) => {
         setResponseData(response.data);
-
-        console.log("response: ", responseData);
+        console.log("Response:", response.data); // Log the response data
       })
       .catch((error) => {
         console.error("GetError:", error);
