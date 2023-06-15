@@ -1,15 +1,40 @@
+body {
+  color: blue;
+}
+
+h1 {
+  color: rgba(62, 62, 62, 0.466);
+  font-size: 20px;
+  margin: 20px;
+
+}
 .connected {
-    background-color: rgba(3, 3, 147, 0.659);
-    position: relative;
-    /* margin-left:-70%;
-    margin-top: 10px; */
+    display: flex;
+    position: absolute;
+    gap: 10%;
+    /* margin-left:-100px; */
+    /* margin-top: 10px; */
     top: 350px;
     bottom: 0px;
     border-radius: 20px;
-    height: 45%;
-    gap: 10px;
-    width: 60%;
+    height: 40vh;
+    /* gap: 10px; */
+    width: 80vh;
+    left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
 
+button {
+  align-items: center;
+  width: 100px;
+  padding: 10px;
+  background-color: #EB806C ;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 /*   position: relative;
   display: flex;

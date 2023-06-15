@@ -1,39 +1,35 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css"; // Import the CSS file
+import axios from "axios";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [valid, setValid] = useState(false);
 
-  const handleLogin = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    fetch("http://ec2-13-53-39-206.eu-north-1.compute.amazonaws.com:9000/testAPI", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle the response data
-        console.log(data);
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during the request
-        console.error(error);
-      });
+    try {
+      // Send login request to backend
+      const response = await axios.post("/login", { username, password });
+      console.log("Login response:", response.data);
+
+      // Reset form fields
+      setUsername("");
+      setPassword("");
+      setValid(true);
+
+    } catch (error) {
+      console.error("Login error:", error);
+    }
   };
 
   return (
     <div className="login-container">
       <h1 className="login-heading">Login</h1>
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Username"
@@ -53,9 +49,12 @@ const Login = () => {
         <Link to="/signup">
           <button className="login-nav-button">Back</button>
         </Link>
-        <button className="login-nav-button" onClick={handleLogin}>
+        {/* <button className="login-nav-button" onClick={handleLogin}>
           Login
-        </button>
+        </button> */}
+        <Link to={valid ? "/dashboard" : "/login"}>
+          <button className="login-nav-button">Login</button>
+        </Link>
       </div>
     </div>
   );

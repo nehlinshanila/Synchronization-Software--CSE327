@@ -69,7 +69,7 @@ const Dashboard = () => {
         <StatisticsPie chartData={userData} />
       </div>
       <div className="flex-container">
-        <SyncUpdate />
+        {/* <SyncUpdate /> */}
         <Connected />
       </div>
     </div>

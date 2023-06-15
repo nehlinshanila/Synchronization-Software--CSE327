@@ -1,7 +1,8 @@
 import { AiOutlineFile } from "react-icons/ai";
 
 const FileComponent = () => {
-    return ( <div>
+    return ( 
+    <div>
         <div>
           <AiOutlineFile />
           <span>File 1</span>
@@ -14,7 +15,9 @@ const FileComponent = () => {
           <AiOutlineFile />
           <span>File 3</span>
         </div>
-      </div> );
+      </div> 
+      );
 }
  
 export default FileComponent;
+// name size date
